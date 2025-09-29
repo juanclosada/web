@@ -1,0 +1,47 @@
+
+Run
+Copy code
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+        <div id="product-list">
+            <h2>Productos</h2>
+            <h2>armario</h2>
+            <img src="imagen/armario  7.jpg" alt="Oppo Find X3">
+            <div class="product">
+                <span>Producto 1</span>
+                <span class="price" data-price="100000">₱ 1.234,000</span>
+                <button onclick="addToCart('Producto 1', 1234000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <span>Producto 2</span>
+                <span class="price" data-price="200000">₱ 200,000</span>
+                <button onclick="addToCart('Producto 2', 200000)">Agregar al Carrito</button>
+            </div>
+        </div>
+        
+        <div id="cart">
+            <h2>Tu Carrito</h2>
+            <ul id="cart-items"></ul>
+            <p id="total">Total: ₱ 0</p>
+           
+            <select id="paymentMethod">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="tarjeta">Tarjeta de Debito</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+            <button onclick="checkout()">Pagar</button>
+        </div>
+    </div>
+    <script src="carrito.js"></script>
+</body>
+</html>
