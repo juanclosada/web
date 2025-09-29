@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: mi-app-php
+    env: docker
+    dockerfilePath: ./Dockerfile
