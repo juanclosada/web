@@ -1,5 +1,12 @@
+# Exported from Render on 2025-10-01T23:35:29Z
+version: "1"
 services:
   - type: web
-    name: mi-app-php
-    env: docker
+    name: PAGINA WEB
+    runtime: docker
+    repo: https://github.com/juanclosada/web
+    plan: free
+    region: oregon
+    dockerContext: .
     dockerfilePath: ./Dockerfile
+    autoDeployTrigger: commit
